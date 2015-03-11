@@ -153,6 +153,13 @@ table {
 .screenshots{
 	float: left;
 	width: 32%;
+	margin-top: 20x;
+}
+
+.image-title{
+	margin-top: 20px;
+	font-size: 19px;
+	margin-bottom: 10px;
 }
 .top-grid {
     width: 45%;
