@@ -16,6 +16,53 @@
         <link href='http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700' rel='stylesheet' type='text/css'>
         <!----//webfonts---->
 		
+    
+    <script>
+    
+    // By Chris Coyier & tweaked by Mathias Bynens
+
+$(function() {
+
+	// Find all YouTube videos
+	var $allVideos = $("iframe[src^='http://www.youtube.com']"),
+
+	    // The element that is fluid width
+	    $fluidEl = $("body");
+
+	// Figure out and save aspect ratio for each video
+	$allVideos.each(function() {
+
+		$(this)
+			.data('aspectRatio', this.height / this.width)
+			
+			// and remove the hard coded width/height
+			.removeAttr('height')
+			.removeAttr('width');
+
+	});
+
+	// When the window is resized
+	// (You'll probably want to debounce this)
+	$(window).resize(function() {
+
+		var newWidth = $fluidEl.width();
+		
+		// Resize all videos according to their own aspect ratio
+		$allVideos.each(function() {
+
+			var $el = $(this);
+			$el
+				.width(newWidth)
+				.height(newWidth * $el.data('aspectRatio'));
+
+		});
+
+	// Kick off one resize to fix all videos on page load
+	}).resize();
+
+});
+    
+    </script>
     </head>
     
     <body>
@@ -35,7 +82,7 @@
             <!---End-header---->
             <!---start-content---->
             <div class="content">
-                <p class="intro-text">AN APP WHICH UNCOVERS ALL YOUR FRIENDS' DARKETS SECRETS WHILE DRINKING. TAKE TURNS ANSWERING TABOO QUESTIONS FROM 5 CATEGORIES:
+                <p class="intro-text">AN APP WHICH UNCOVERS ALL YOUR FRIENDS' <b>DARKEST</b>     SECRETS WHILE DRINKING. TAKE TURNS ANSWERING TABOO QUESTIONS FROM 5 CATEGORIES:
                     <b>LOVE, SEX, ETHICS, PERSONALITY & MORTALITY.</b> YOUR FRIENDS TRY TO GUESS WHICH MULTIPLE ANSWER YOU WOULD PICK.</p>
                 <p class= "sub-into-text">THOSE WHO GUESS WRONG TAKE A SIP!</p>
               <div class="screenshots">  
@@ -57,19 +104,43 @@
             </div>
             <!---start-panels---->
             <div class="panels">
-               <iframe width="560" height="315" src="https://www.youtube.com/embed/5UwaXWFbdUA" frameborder="0" allowfullscreen></iframe>
+               <iframe width="100%" height="400px" src="https://www.youtube.com/embed/5UwaXWFbdUA" frameborder="0" allowfullscreen></iframe>
                   
                         <div class="clear"></div>
             </div>
             <!---//End-panels---->
-            <!---start-testimonials---->
+            <!---start-promo---->
             <div class="promo-text">
                 <div class="promo-head">
-                    <p>FIND OUT JUST HOW WELL YOUR FRIENDS REALLY KNOW YOU.</p>
-                    <p>ALL WHILE YOU DRINK</p>
+                    <h3>FIND OUT JUST HOW WELL YOUR FRIENDS REALLY KNOW YOU.</h3>
+                    <h3>ALL WHILE YOU DRINK</h3>
+                    <h2>Drink and Tell Features</h2>
+<table style="width:100%">
+  <tr>
+    <td>
+    <h3>Play with 1 friend, or 100 at the same time</h3>
+        <p>Regardless of whether you&#39re drinking wine over dinner with your best mate or at a                house party with 30 strangers, Drink and Tell is the ultimate drinking game. </p>  
+    </td>
+    <td>
+    <h3>Five scandalous categories to choose from</h3>
+<p>We&#39re sick of the same old questions asked when playing &#39Never Have I Ever&#39. Which is why we&#39ve created hundreds of taboo questions for you and your friends to answer. The five categories include: love, sex, ethics, personality and mortality.</p>  
+    </td> 
+    <td><h3>Randomise all your questions like a mixed goodie bag</h3>
+<p>Can&#39t choose just one category? Why not mix them all up with our &#39randomise&#39 feature for more hours of unpredictableness and laughs.</p></td>
+  </tr>
+  <tr>
+    <td><h3>New questions continuously added</h3>
+<p>Our questions generator is constantly busting out new questions, which we add in our updates on a regular basis. Because nobody likes reading the same question over and over again.</p></td>
+    <td><h3>Submit a question for your chance to win unlimited questions</h3>
+<p>We know our users have scandalous questions up their sleeves. All of our users are encouraged to submit their own question for a chance to win an unlimited supply of questions for the rest of their lives.</p></td> 
+    <td><h3>Submit a question for your chance to win unlimited questions</h3>
+<p>We know our users have scandalous questions up their sleeves. All of our users are encouraged to submit their own question for a chance to win an unlimited supply of questions for the rest of their lives.</p></td>
+  </tr>
+</table>
+
                 </div>
             </div>
-            <!---//End-testimonials---->
+            <!---//End-promo---->
             <!---start-news-letter----->
             <div class="news-letter">
                 <p class="heading">SUBMIT YOUR OWN</p>
