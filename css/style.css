@@ -10,7 +10,9 @@ html,body,div,span,applet,object,iframe,h1,h4,h5,h6,p,blockquote,pre,a,abbr,acro
 }
 
 article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section {
-    display:block
+    display:block;
+    align-content: center;
+    text-align: center;
 }
 
 ol,ul {
@@ -282,47 +284,12 @@ body {
 }
 
 /*---End-stay-with-us-----*/
-/*---start-footer-left-----*/
-.footer-left {
-    float:left
-}
+/*---start-footer-----*/
+
 
 .footer {
+    text-align: center;
     margin:1.5em 0
-}
-
-.footer-left p {
-    font-size:.875em;
-    color:#4C4C4C;
-    line-height:1.8em;
-    margin:.5em auto .5em 0
-}
-
-.footer-left ul li {
-    border-right:1px solid rgba(119,119,119,0.32);
-    padding:0 .5em;
-    display:inline-block
-}
-
-.footer-left ul li:nth-child(1) {
-    padding-left:0
-}
-
-.footer-left ul li a {
-    color:#146BFB;
-    font-size:.8em;
-    transition:.5s all;
-    -webkit-transition:.5s all;
-    -moz-transition:.5s all;
-    -o-transition:.5s all
-}
-
-.footer-left ul li a:hover {
-    color:#4C4C4C
-}
-
-.footer-right {
-    float:right
 }
 
 /*---//End-wrap-----*/
@@ -351,9 +318,6 @@ body {
     width:97%
 }
 
-.faq-grid-left-grid p {
-    width:100%
-}
 }
 
 @media only screen and(max-width: 1280px) and(min-width:1024px) {
@@ -507,7 +471,6 @@ body {
     margin: auto;
     width:90%;
     height:100%;
-    float:left;
 }
 
 .screenshots {
@@ -527,7 +490,7 @@ body {
 .button-transparent-android {
     font-size:16px;
     color:#FFF;
-    padding:2% 5%;
+    padding:2% 4%;
     border:2px solid #FFF;
     text-shadow:2px 4px 3px rgba(0,0,0,0.3)
 }
