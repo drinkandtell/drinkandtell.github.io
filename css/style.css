@@ -6,6 +6,7 @@
     font-size:100%;
     font:inherit;
     vertical-align:baseline;
+     color: #4C4C4C;
 }
 
 article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
@@ -195,6 +196,14 @@ th,td {
 .video {
     object-fit: fill;
 }
+
+.features{
+    padding: 1% 5% 1% 5%;
+    width:40%;
+    height:100%;
+    float: left;
+    text-align: justify;
+}
 /*---//Start-promo----*/
  .promo-head {
     text-align: center;
@@ -211,6 +220,7 @@ th,td {
     background-size: cover;
     margin: 0 auto;
     min-height: 300px;
+     margin-top: 50px;
 }
 .news-letter-header {
     text-align:center;
@@ -271,7 +281,6 @@ th,td {
 /*---form-----*/
  .form-container {
     width: 80%	;
-	
 	text-align: center;
     margin: 0 auto;
 }

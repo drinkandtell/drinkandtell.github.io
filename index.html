@@ -1,207 +1,279 @@
-<!DOCTYPE HTML>
+<!DOCTYPE html>
 <html>
-    
-    <head>
-        <title>Drink and Tell</title>
-        <link href="css/style.css" rel='stylesheet' type='text/css' />
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-		<meta name="Keywords" content="drink and tell app android ios drinking game iphone play fun questions friends drink love personality ethics questions play store ios iphone ">
-        <link rel="shortcut icon" type="image/x-icon" href="images/fav-icon.jpg" />
-        <script type="application/x-javascript">
-            addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); }
-        </script>
-        </script>
-        <!----webfonts---->
-        <link href='http://fonts.googleapis.com/css?family=Didact+Gothic' rel='stylesheet' type='text/css'>
-        <link href='http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700' rel='stylesheet' type='text/css'>
-        <!----//webfonts---->
-		
-    
+<head>
+    <title>Drink and Tell</title>
+    <link href="css/style.css" rel='stylesheet' type='text/css'>
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <meta content=
+    "drink and tell app android ios drinking game iphone play fun questions friends drink love personality ethics questions play store ios iphone"
+    name="Keywords">
+    <link href="images/fav-icon.jpg" rel="shortcut icon" type="image/x-icon">
+    <script type="application/x-javascript">
+        addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); }
+    </script><!--==webfonts==-->
+    <link href='http://fonts.googleapis.com/css?family=Didact+Gothic' rel=
+    'stylesheet' type='text/css'>
+    <link href=
+    'http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700' rel=
+    'stylesheet' type='text/css'><!--==//webfonts==-->
+
     <script>
-    
+
     // By Chris Coyier & tweaked by Mathias Bynens
 
-$(function() {
+    $(function() {
 
-	// Find all YouTube videos
-	var $allVideos = $("iframe[src^='http://www.youtube.com']"),
+    // Find all YouTube videos
+    var $allVideos = $("iframe[src^='http://www.youtube.com']"),
 
-	    // The element that is fluid width
-	    $fluidEl = $("panels");
+        // The element that is fluid width
+        $fluidEl = $("panels");
 
-	// Figure out and save aspect ratio for each video
-	$allVideos.each(function() {
+    // Figure out and save aspect ratio for each video
+    $allVideos.each(function() {
 
-		$(this)
-			.data('aspectRatio', this.height / this.width)
-			
-			// and remove the hard coded width/height
-			.removeAttr('height')
-			.removeAttr('width');
+        $(this)
+            .data('aspectRatio', this.height / this.width)
+            
+            // and remove the hard coded width/height
+            .removeAttr('height')
+            .removeAttr('width');
 
-	});
+    });
 
-	// When the window is resized
-	// (You'll probably want to debounce this)
-	$(window).resize(function() {
+    // When the window is resized
+    // (You'll probably want to debounce this)
+    $(window).resize(function() {
 
-		var newWidth = $fluidEl.width();
-		
-		// Resize all videos according to their own aspect ratio
-		$allVideos.each(function() {
+        var newWidth = $fluidEl.width();
+        
+        // Resize all videos according to their own aspect ratio
+        $allVideos.each(function() {
 
-			var $el = $(this);
-			$el
-				.width(newWidth)
-				.height(newWidth * $el.data('aspectRatio'));
+            var $el = $(this);
+            $el
+                .width(newWidth)
+                .height(newWidth * $el.data('aspectRatio'));
 
-		});
+        });
 
-	// Kick off one resize to fix all videos on page load
-	}).resize();
+    // Kick off one resize to fix all videos on page load
+    }).resize();
 
-});
-    
+    });
+
     </script>
-    </head>
-    
-    <body>
-        <!--- start-wrap---->
-        <div <!---start-header---->
-            <div class="header">
-                <p class="heading">DRINK & TELL</p>
-                <p class="sub-heading">THE ULTIMATE PRE-DRINKING GAME</p>
-                <div class="button-container">
-                    <a href="" class="button-transparent-ios">DOWNLOAD THE APP (FOR IOS)</a>
+</head>
+
+<body>
+    <!--- start-wrap==-->
+
+    <div>
+        <!---start-header==-->
+
+        <div class="header">
+            <p class="heading">DRINK & TELL</p>
+
+            <p class="sub-heading">THE ULTIMATE PRE-DRINKING GAME</p>
+
+            <div class="button-container">
+                <a class="button-transparent-ios" href="">DOWNLOAD THE APP (FOR
+                IOS)</a>
+            </div>
+
+            <div class="button-container">
+                <a class="button-transparent-android" href="">DOWNLOAD THE APP
+                (FOR ANDROID)</a>
+            </div>
+
+            <div class="clear"></div>
+        </div><!---End-header==-->
+        <!---start-content==-->
+
+        <div class="content">
+            <p class="intro-text">AN APP WHICH UNCOVERS ALL YOUR FRIENDS'
+            <b>DARKEST</b> SECRETS WHILE DRINKING. TAKE TURNS ANSWERING TABOO
+            QUESTIONS FROM 5 CATEGORIES: <b>LOVE, SEX, ETHICS, PERSONALITY &
+            MORTALITY.</b> YOUR FRIENDS TRY TO GUESS WHICH MULTIPLE ANSWER YOU
+            WOULD PICK.</p>
+
+            <p class="sub-into-text">THOSE WHO GUESS WRONG TAKE A SIP!</p>
+
+            <div class="screenshots">
+                <img src="images/screen1.png">
+
+                <p class="image-title">CHOOSE CATEGORY</p>
+
+                <p>Select out of 5 categories or randomise questions.</p>
+            </div>
+
+            <div class="screenshots">
+                <img src="images/screen2.png">
+
+                <p class="image-title">ANSWER QUESTIONS</p>
+
+                <p>Take turns answering multiple choice questions.</p>
+            </div>
+
+            <div class="screenshots">
+                <img src="images/screen3.png">
+
+                <p class="image-title">DRINK!</p>
+
+                <p>Friends who guess the wrong answer, have a drink!</p>
+            </div>
+
+            <div class="clear"></div>
+        </div><!---start-panels==-->
+
+        <div class="panels">
+            <iframe frameborder="0" height="400px" src=
+            "https://www.youtube.com/embed/5UwaXWFbdUA" width="100%"></iframe>
+
+            <div class="clear"></div>
+        </div><!---//End-panels==-->
+        <!---start-promo==-->
+
+        <div class="promo-text">
+            <div class="promo-head">
+                <h3>FIND OUT JUST HOW WELL YOUR FRIENDS REALLY KNOW YOU.</h3>
+
+                <h3>ALL WHILE YOU DRINK</h3>
+
+                <h2>Drink and Tell Features</h2>
+
+                <div class="features">
+                    <h3>Play with 1 friend, or 100 at the same time</h3>
+
+                    <p>Regardless of whether you&#39;re drinking wine over
+                    dinner with your best mate or at a house party with 30
+                    strangers, Drink and Tell is the ultimate drinking
+                    game.</p>
                 </div>
-                <div class="button-container">
-                    <a href="" class="button-transparent-android">DOWNLOAD THE APP (FOR ANDROID)</a>
+
+                <div class="features">
+                    <h3>Five scandalous categories to choose from</h3>
+
+                    <p>We&#39;re sick of the same old questions asked when
+                    playing &#39;Never Have I Ever&#39;. Which is why we&#39;ve
+                    created hundreds of taboo questions for you and your
+                    friends to answer. The five categories include: love, sex,
+                    ethics, personality and mortality.</p>
                 </div>
-                <div class="clear"></div>
+
+                <div class="features">
+                    <h3>Randomise all your questions like a mixed goodie
+                    bag</h3>
+
+                    <p>Can&#39;t choose just one category? Why not mix them all
+                    up with our &#39;randomise&#39; feature for more hours of
+                    unpredictableness and laughs.</p>
+                </div>
+
+                <div class="features">
+                    <h3>New questions continuously added</h3>
+
+                    <p>Our questions generator is constantly busting out new
+                    questions, which we add in our updates on a regular basis.
+                    Because nobody likes reading the same question over and
+                    over again.</p>
+                </div>
+
+                <div class="features">
+                    <h3>Submit a question for your chance to win unlimited
+                    questions</h3>
+
+                    <p>We know our users have scandalous questions up their
+                    sleeves. All of our users are encouraged to submit their
+                    own question for a chance to win an unlimited supply of
+                    questions for the rest of their lives.</p>
+                </div>
+
+                <div class="features">
+                    <h3>Submit a question for your chance to win unlimited
+                    questions</h3>
+
+                    <p>We know our users have scandalous questions up their
+                    sleeves. All of our users are encouraged to submit their
+                    own question for a chance to win an unlimited supply of
+                    questions for the rest of their lives.</p>
+                </div>
             </div>
-            <!---End-header---->
-            <!---start-content---->
-            <div class="content">
-                <p class="intro-text">AN APP WHICH UNCOVERS ALL YOUR FRIENDS' <b>DARKEST</b>     SECRETS WHILE DRINKING. TAKE TURNS ANSWERING TABOO QUESTIONS FROM 5 CATEGORIES:
-                    <b>LOVE, SEX, ETHICS, PERSONALITY & MORTALITY.</b> YOUR FRIENDS TRY TO GUESS WHICH MULTIPLE ANSWER YOU WOULD PICK.</p>
-                <p class= "sub-into-text">THOSE WHO GUESS WRONG TAKE A SIP!</p>
-              <div class="screenshots">  
-				<img src="images/screen1.png" />
-				<p class="image-title">CHOOSE CATEGORY</p>
-				<p>Select out of 5 categories or randomise questions.</p>
-				</div> 
-				        <div class="screenshots">  
-				<img src="images/screen2.png" />
-				<p class="image-title">ANSWER QUESTIONS</p>
-				<p>Take turns answering multiple choice questions.</p>
-				</div>        
-				<div class="screenshots">  
-				<img src="images/screen3.png" />
-				<p class="image-title">DRINK!</p>
-				<p>Friends who guess the wrong answer, have a drink!</p>
-				</div> 
-                <div class="clear"></div>
-            </div>
-            <!---start-panels---->
-            <div class="panels">
-               <iframe width="100%" height="400px" src="https://www.youtube.com/embed/5UwaXWFbdUA" frameborder="0" allowfullscreen></iframe>
-                  
-                        <div class="clear"></div>
-            </div>
-            <!---//End-panels---->
-            <!---start-promo---->
-            <div class="promo-text">
+            <div class="clear"></div>
+        </div><!---//End-promo==-->
+        <!---start-news-letter===-->
+
+        <div class="news-letter">
+            <p class="heading">SUBMIT YOUR OWN</p>
+
+            <p class="heading">QUESTIONS</p>
+        </div><!---//End-news-letter===-->
+        <!---start-stay-with===-->
+
+        <div class="stay-with">
+            <div class="stay-with-head">
                 <div class="promo-head">
-                    <h3>FIND OUT JUST HOW WELL YOUR FRIENDS REALLY KNOW YOU.</h3>
-                    <h3>ALL WHILE YOU DRINK</h3>
-                    <h2>Drink and Tell Features</h2>
-<table style="width:100%">
-  <tr>
-    <td>
-    <h3>Play with 1 friend, or 100 at the same time</h3>
-        <p>Regardless of whether you&#39re drinking wine over dinner with your best mate or at a                house party with 30 strangers, Drink and Tell is the ultimate drinking game. </p>  
-    </td>
-    <td>
-    <h3>Five scandalous categories to choose from</h3>
-<p>We&#39re sick of the same old questions asked when playing &#39Never Have I Ever&#39. Which is why we&#39ve created hundreds of taboo questions for you and your friends to answer. The five categories include: love, sex, ethics, personality and mortality.</p>  
-    </td> 
-    <td><h3>Randomise all your questions like a mixed goodie bag</h3>
-<p>Can&#39t choose just one category? Why not mix them all up with our &#39randomise&#39 feature for more hours of unpredictableness and laughs.</p></td>
-  </tr>
-  <tr>
-    <td><h3>New questions continuously added</h3>
-<p>Our questions generator is constantly busting out new questions, which we add in our updates on a regular basis. Because nobody likes reading the same question over and over again.</p></td>
-    <td><h3>Submit a question for your chance to win unlimited questions</h3>
-<p>We know our users have scandalous questions up their sleeves. All of our users are encouraged to submit their own question for a chance to win an unlimited supply of questions for the rest of their lives.</p></td> 
-    <td><h3>Submit a question for your chance to win unlimited questions</h3>
-<p>We know our users have scandalous questions up their sleeves. All of our users are encouraged to submit their own question for a chance to win an unlimited supply of questions for the rest of their lives.</p></td>
-  </tr>
-</table>
+                    <p>FOR YOUR CHANCE TO WIN UNLIMITED QUESTION
+                    DOWNLOADS!</p><br>
+                    <p>Submit a question you'd like included in the Drink and
+                    Tell app.
+                    <p>
 
+                    <p>We will review the questions to be included in future
+                    updates and add you to our mailing list.</p>
                 </div>
             </div>
-            <!---//End-promo---->
-            <!---start-news-letter----->
-            <div class="news-letter">
-                <p class="heading">SUBMIT YOUR OWN</p>
-                <p class="heading">QUESTIONS</p>
-            </div>
-            <!---//End-news-letter----->
-            <!---start-stay-with----->
-            <div class="stay-with">
-                <div class="stay-with-head">
-                    <div class="promo-head">
-                        <p>FOR YOUR CHANCE TO WIN UNLIMITED QUESTION DOWNLOADS!</p><br>
-                        </p>Submit a question you'd like included in the Drink and Tell app.</p>
-                        <p>We will review the questions to be included in future updates and add you to our mailing list.</p>
-                    </div>
-                </div>
-				<div class="form-container">
-                   <form class="form" action="MAILTO:the.black.market.apps@gmail.com" method="post" enctype="text/plain">
-					<p class="label">Email Address*</p>
-				   <input id="address" name="email" class="text-box-dark" type="text" value="Email" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Email';}">
-                     <p class="label">Submission</p> <br><br><br>
-					  <p class="label-small">Add your quiz topic or question to be considered for the app</p>  
-					   <input id="submission" name="submission" class="text-box-dark" type="text" value="Example: If I were stranded on an Island, which item would I take with me?" onfocus="this.value = '';" 
-					   onblur="if (this.value == '') {this.value = 'Example: If I were stranded on an Island, which item would I take with me?';}">
-					   <input type="submit" class="button-submit" value="Submit">
-                    </form>
-					</div>
-               
-            </div>
-            <!---End-stay-with----->
-            <!---start-footer----->
-            <div class="footer">
-                <div class="footer-left">
-                    <p>Copyright &#169; 2015.BlackMarketApps</p>
-                </div>
-                <div class="footer-right">
-                    <!----move-top-path---->
-                    <script type="text/javascript">
-                        $(document).ready(function() {
-                        								$().UItoTop({ easingType: 'easeOutQuart' });
-                        							});
-                    </script>
-                    <script type="text/javascript" src="js/move-top.js"></script>
-                    <script type="text/javascript" src="js/easing.js"></script>
-                    <script type="text/javascript">
-                        jQuery(document).ready(function($) {
-                        									$(".scroll").click(function(event){		
-                        										event.preventDefault();
-                        										$('html,body').animate({scrollTop:$(this.hash).offset().top},1200);
-                        									});
-                        								});
-                    </script>
-                    <!----move-top-path---->
-                    <a href="#" id="toTop" style="display: block;"><span id="toTopHover" style="opacity: 1;"></span></a>
-                </div>
-                <div class="clear"></div>
-            </div>
-            <!---//End-footer----->
-        </div>
-        <!---End-content---->
-        </div>
-        <!--- //End-wrap---->
-    </body>
 
+            <div class="form-container">
+                <form action="MAILTO:the.black.market.apps@gmail.com" class=
+                "form" enctype="text/plain" method="post">
+                    <p class="label">Email Address*</p><input class=
+                    "text-box-dark" id="address" name="email" onblur=
+                    "if (this.value == '') {this.value = 'Email';}" onfocus=
+                    "this.value = '';" type="text" value="Email">
+
+                    <p class="label">Submission</p><br>
+                    <br>
+                    <br>
+
+                    <p class="label-small">Add your quiz topic or question to
+                    be considered for the app</p><input class="text-box-dark"
+                    id="submission" name="submission" onblur=
+                    "if (this.value == '') {this.value = 'Example: If I were stranded on an Island, which item would I take with me?';}"
+                    onfocus="this.value = '';" type="text" value=
+                    "Example: If I were stranded on an Island, which item would I take with me?">
+                    <input class="button-submit" type="submit" value="Submit">
+                </form>
+            </div>
+        </div><!---End-stay-with===-->
+        <!---start-footer===-->
+
+        <div class="footer">
+            <div class="footer-left">
+                <p>Copyright &#169; 2015.BlackMarketApps</p>
+            </div>
+
+            <div class="footer-right">
+                <!--==move-top-path==-->
+                <script type="text/javascript">
+        $(document).ready(function() {
+                                                        $().UItoTop({ easingType: 'easeOutQuart' });
+                                                    });
+                </script> <script src="js/move-top.js" type="text/javascript"></script> <script src="js/easing.js" type="text/javascript"></script> <script type="text/javascript">
+        jQuery(document).ready(function($) {
+                                                            $(".scroll").click(function(event){     
+                                                                event.preventDefault();
+                                                                $('html,body').animate({scrollTop:$(this.hash).offset().top},1200);
+                                                            });
+                                                        });
+                </script> <!--==move-top-path==-->
+                 <a href="#" id="toTop" style="display: block;"><span id=
+                "toTopHover" style="opacity: 1;"></span></a>
+            </div>
+
+            <div class="clear"></div>
+        </div><!---//End-footer===-->
+    </div><!---End-content==-->
+    <!--- //End-wrap==-->
+</body>
 </html>
