@@ -139,16 +139,6 @@ body {
     margin-bottom:10px
 }
 
-.top-grid {
-    width:45%;
-    float:left;
-    margin-right:8%;
-    margin-bottom:5%
-}
-
-.top-grid:nth-child(2),.top-grid:nth-child(4) {
-    margin-right:0
-}
 
 .intro-text {
     margin:1em
@@ -157,10 +147,6 @@ body {
 .sub-into-text {
     margin:4em;
     font-size:small
-}
-
-.content-top-grids {
-    margin:6em 0 2em
 }
 
 /*---start-panels----*/
@@ -178,7 +164,6 @@ body {
 .features {
     padding:1% 5%;
     width:40%;
-    height:100%;
     float:left;
     text-align:left;
 }
@@ -254,10 +239,6 @@ body {
     text-align:left;
     margin-left:0
 }
-
-.text-box-dark {
-}
-
 .button-submit {
     background:#1f1f1f;
     padding:.7em 1.8em;
@@ -391,14 +372,6 @@ body {
 .wrap {
     width:90%
 }
-
-.panel-left span {
-    background:url(../images/sdual-divice.png) no-repeat 0 0;
-    width:250px;
-    height:366px;
-    display:block;
-    margin:0 auto
-}
 }
 
 @media only screen and(max-width: 640px) and(min-width:480px) {
@@ -423,13 +396,13 @@ body {
     color:#FFF;
     font-size:16px;
     padding:1% 5%;
-    width: 100%;
+  
     border:2px solid #FFF;
     text-shadow:2px 4px 3px rgba(0,0,0,0.3)
 }
 
 .button-transparent-android {
-       width: 100%;
+  
     font-size:16px;
     color:#FFF;
     padding:1% 5%;
@@ -468,17 +441,15 @@ body {
     float:left;
 }
     
-    .button-transparent-ios {
+.button-transparent-ios {
     color:#FFF;
     font-size:16px;
     padding:1% 5%;
-        width: 80%;
     border:2px solid #FFF;
     text-shadow:2px 4px 3px rgba(0,0,0,0.3)
 }
 
 .button-transparent-android {
-       width: 80%;
     font-size:16px;
     color:#FFF;
     padding:1% 5%;
@@ -544,13 +515,11 @@ body {
     color:#FFF;
     font-size:16px;
     padding:1% 5%;
-        width: 80%;
     border:2px solid #FFF;
     text-shadow:2px 4px 3px rgba(0,0,0,0.3)
 }
 
 .button-transparent-android {
-       width: 80%;
     font-size:16px;
     color:#FFF;
     padding:1% 5%;
@@ -559,13 +528,13 @@ body {
 }
    
     
-.heading {
+    .heading {
     margin:auto 0;
     text-align:center;
     font-size:62px;
-    font-weight:700;
+    font-weight:600;
     letter-spacing:3px;
-    color:#FFF;
+    color:red;
     font-family:'Open Sans Condensed',sans-serif;
     text-shadow:2px 4px 3px rgba(0,0,0,0.3)
 }
