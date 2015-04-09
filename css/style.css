@@ -434,6 +434,11 @@ body {
     .wrap {
     width:85%
 }
+    
+    .promo-head {
+    text-align:center;
+    padding:5px;
+}
 .features {
     padding:1% 1%;
     width:90%;
@@ -514,7 +519,7 @@ body {
     .button-transparent-ios {
     color:#FFF;
     font-size:16px;
-    padding:1% 5%;
+    padding:2% 6%;
     border:2px solid #FFF;
     text-shadow:2px 4px 3px rgba(0,0,0,0.3)
 }
@@ -522,7 +527,7 @@ body {
 .button-transparent-android {
     font-size:16px;
     color:#FFF;
-    padding:1% 5%;
+    padding:2% 5%;
     border:2px solid #FFF;
     text-shadow:2px 4px 3px rgba(0,0,0,0.3)
 }
@@ -534,12 +539,12 @@ body {
     font-size:62px;
     font-weight:600;
     letter-spacing:3px;
-    color:red;
+    color:white;
     font-family:'Open Sans Condensed',sans-serif;
     text-shadow:2px 4px 3px rgba(0,0,0,0.3)
 }
 .wrap {
-    width:90%
+    width:80%
 }
 
 .wrap input[type="text"],.wrap input[type="submit"],.wrap input[type="button"] {
