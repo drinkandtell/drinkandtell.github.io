@@ -436,6 +436,10 @@ font-weight: 800;
     border:2px solid #FFF;
     text-shadow:2px 4px 3px rgba(0,0,0,0.3)
 }
+    
+    .button-container {
+    margin-bottom: 20px;
+}
    
     
     .heading {
@@ -499,7 +503,7 @@ font-weight: 800;
 }
 
 .button-transparent-android {
-    margin-top: 5%;
+    margin-top: 100px;
     font-size:14px;
     color:#FFF;
     padding:5% 4% 5% 6%;
