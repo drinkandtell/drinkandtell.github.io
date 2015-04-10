@@ -499,20 +499,20 @@ font-weight: 800;
 }
 
 .button-transparent-android {
-    margin-top: 2%;
+    margin-top: 5%;
     font-size:14px;
     color:#FFF;
     padding:5% 4% 5% 6%;
     border:2px solid #FFF;
     text-shadow:2px 4px 3px rgba(0,0,0,0.3)
-}
+    }
     
     .button-submit {
         margin-bottom: 20px;
     }
    
     .press-kit{
-    margin-top: 20px;
+    margin-bottom: 20px;
     }
     
     .heading {
