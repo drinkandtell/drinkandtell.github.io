@@ -440,9 +440,10 @@ font-weight: 800;
     .button-container 
     {
     color:#FFF;
-    margin:5%;
+    margin-left:5%;
+        margin-right:5%;
     text-align:center;
-    margin-bottom: 30px;
+    margin-bottom: 50px;
 }
    
     
