@@ -6,7 +6,8 @@ html,body,div,span,applet,object,iframe,h1,h4,h5,h6,p,blockquote,pre,a,abbr,acro
     font-size:100%;
     font:inherit;
     vertical-align:baseline;
-    color:#4C4C4C
+    color:#4C4C4C;
+    font-family: 'Open Sans', sans-serif;
 }
 
 article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section {
@@ -56,7 +57,7 @@ img {
 
 /*end reset*/
 body {
-    font-family:'Didact Gothic',sans-serif;
+    font-family: 'Open Sans', sans-serif;
     background:#FFF
 }
 
@@ -90,7 +91,7 @@ font-weight: 800;
     font-weight:700;
     letter-spacing:3px;
     color:#FFF;
-    font-family:'Open Sans Condensed',sans-serif;
+    font-family: 'Open Sans', sans-serif;
     text-shadow:2px 4px 3px rgba(0,0,0,0.3)
 }
 
@@ -100,7 +101,7 @@ font-weight: 800;
     font-size:32px;
     font-weight:700;
     letter-spacing:3px;
-    font-family:'Open Sans Condensed',sans-serif;
+    font-family: 'Open Sans', sans-serif;
     text-shadow:2px 4px 3px rgba(0,0,0,0.3)
 }
 
@@ -264,7 +265,7 @@ font-weight: 800;
     background:#1f1f1f;
     padding:.7em 1.8em;
     text-align:center;
-    font-family:'Didact Gothic',sans-serif;
+    font-family: 'Open Sans', sans-serif;
     border:none;
     margin:0 auto;
     margin-top:20px;
@@ -368,6 +369,7 @@ font-weight: 800;
     width:90%
 }
 .features {
+    
     padding:0px;
     margin: 0px;
     width:90%;
@@ -406,7 +408,7 @@ font-weight: 800;
     font-weight:700;
     letter-spacing:3px;
     color:#FFF;
-    font-family:'Open Sans Condensed',sans-serif;
+    font-family: 'Open Sans', sans-serif;
     text-shadow:2px 4px 3px rgba(0,0,0,0.3)
 }
 
@@ -465,7 +467,7 @@ font-weight: 800;
     font-weight:600;
     letter-spacing:3px;
     color:#FFF;
-    font-family:'Open Sans Condensed',sans-serif;
+   font-family: 'Open Sans', sans-serif;
     text-shadow:2px 4px 3px rgba(0,0,0,0.3)
 }
 
@@ -538,7 +540,7 @@ font-weight: 800;
     font-weight:500;
     letter-spacing:3px;
     color:white;
-    font-family:'Open Sans Condensed',sans-serif;
+    font-family: 'Open Sans', sans-serif;
     text-shadow:2px 4px 3px rgba(0,0,0,0.3)
 }
 .wrap {
