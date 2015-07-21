@@ -427,9 +427,9 @@ body {
     color: #FFF;
    background-color: Transparent;
     background-repeat:no-repeat;
-    padding: 20px;
+    padding: 10px;
     width: 90%;
-     font-size: 16px;
+     font-size: 13px;
     border: 2px solid white;
     cursor:pointer;
     overflow: hidden;
@@ -458,7 +458,7 @@ body {
     .heading {
         margin: auto 0;
         text-align: center;
-        font-size: 52px;
+        font-size: 42px;
         font-weight: 600;
         letter-spacing: 3px;
         color: #FFF;
@@ -469,7 +469,7 @@ body {
     .sub-heading {
     color: #FFF;
     text-align: center;
-    font-size: 22px;
+    font-size: 19px;
     font-weight: 600;
     letter-spacing: 3px;
     font-family: 'Open Sans', sans-serif;
