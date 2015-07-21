@@ -452,7 +452,7 @@ body {
         margin-left: 5%;
         margin-right: 5%;
         text-align: center;
-        margin-bottom: 40px;
+        margin-bottom: 15px;
         margin-top: 15px;
     }
     .heading {
@@ -470,6 +470,7 @@ body {
     color: #FFF;
     text-align: center;
     font-size: 19px;
+        margin-top: 10px;
     font-weight: 600;
     letter-spacing: 3px;
     font-family: 'Open Sans', sans-serif;
