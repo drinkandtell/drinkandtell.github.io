@@ -206,12 +206,12 @@ body {
 }
 
 .button-download{
-    padding: 1% 5%;
-    border: 2px solid #FFF;
-    text-shadow: 2px 4px 3px rgba(0, 0, 0, 0.3);
-    background-color: Transparent;
+   background-color: Transparent;
     background-repeat:no-repeat;
+    padding: 20px;
+    border: 1px solid black;
     cursor:pointer;
+    overflow: hidden;
     outline:none;
 }
 .button-transparent-ios {
