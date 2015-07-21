@@ -529,4 +529,8 @@ body {
     text-align: center;
        margin-top: 20px;
    }
+    
+ .intro-text {
+    margin: 2em;
+}
 }
