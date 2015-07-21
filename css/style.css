@@ -206,8 +206,10 @@ body {
 }
 
 .button-download{
-    border: 1px solid white;
-     background-color: Transparent;
+    padding: 1% 5%;
+    border: 2px solid #FFF;
+    text-shadow: 2px 4px 3px rgba(0, 0, 0, 0.3);
+    background-color: Transparent;
     background-repeat:no-repeat;
     cursor:pointer;
     overflow: hidden;
