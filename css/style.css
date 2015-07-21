@@ -484,4 +484,12 @@ body {
         float: none;
         text-align: center
     }
+    
+   .press-kit {
+    display: block;
+    align-content: center;
+    text-align: center;
+    margin: 3%;
+       margin-top: 20px;
+}
 }
