@@ -204,6 +204,15 @@ body {
     margin: 5%;
     text-align: center
 }
+
+.button-download{
+    border: 1px solid white;
+     background-color: Transparent;
+    background-repeat:no-repeat;
+    cursor:pointer;
+    overflow: hidden;
+    outline:none;
+}
 .button-transparent-ios {
     color: #FFF;
     font-size: 16px;
