@@ -458,13 +458,23 @@ body {
     .heading {
         margin: auto 0;
         text-align: center;
-        font-size: 62px;
+        font-size: 52px;
         font-weight: 600;
         letter-spacing: 3px;
         color: #FFF;
         font-family: 'Open Sans', sans-serif;
         text-shadow: 2px 4px 3px rgba(0, 0, 0, 0.3)
     }
+    
+    .sub-heading {
+    color: #FFF;
+    text-align: center;
+    font-size: 22px;
+    font-weight: 600;
+    letter-spacing: 3px;
+    font-family: 'Open Sans', sans-serif;
+    text-shadow: 2px 4px 3px rgba(0, 0, 0, 0.3)
+}
     .heading-submit {
         margin: auto 0;
         text-align: center;
