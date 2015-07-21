@@ -393,7 +393,10 @@ body {
 /*---start-responsive design----*/
 /* Smartphones (portrait and landscape) ----------- */
 
-@media screen (max-width: 500px){
+@media only screen and (max-width: 500px) {
+        body {
+        background-color: lightblue;
+    }
     .wrap {
         width: 100%
     }
