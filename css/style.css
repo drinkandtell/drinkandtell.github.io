@@ -394,9 +394,6 @@ body {
 /* Smartphones (portrait and landscape) ----------- */
 
 @media only screen and (max-width: 500px) {
-        body {
-        background-color: lightblue;
-    }
     .wrap {
         width: 100%
     }
@@ -407,8 +404,8 @@ body {
         text-align: center
     }
     .features {
-        padding: 1% 1%;
-        width: 90%;
+        padding: 1% 5%;
+        width: 100%;
         height: 100%;
         float: left;
     }
@@ -433,7 +430,8 @@ body {
     }
     .image-title {
         margin-top: 20px;
-        font-size: 10px;
+        font-size: 15px;
+        font-weight: 300;
         margin-bottom: 10px
     }
     .button-container {
@@ -457,10 +455,10 @@ body {
     .heading-submit {
         margin: auto 0;
         text-align: center;
-        font-size: 10px;
+        font-size: 30px;
         font-weight: 500;
         letter-spacing: 3px;
-        color: red;
+        color: white;
         font-family: 'Open Sans', sans-serif;
         text-shadow: 2px 4px 3px rgba(0, 0, 0, 0.3)
     }
