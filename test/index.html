@@ -55,6 +55,7 @@
             replacement.innerHTML = addStylesNode.textContent;
             document.body.appendChild(replacement)
             addStylesNode.parentElement.removeChild(addStylesNode);
+            document.getElementById('loading').style.height = '0px';
         };
         var raf = requestAnimationFrame || mozRequestAnimationFrame ||
             webkitRequestAnimationFrame || msRequestAnimationFrame;
