@@ -54,6 +54,8 @@
             replacement.innerHTML = addStylesNode.textContent;
             document.body.appendChild(replacement)
             addStylesNode.parentElement.removeChild(addStylesNode);
+            $("#loading").css("display", "none");
+
         };
         var raf = requestAnimationFrame || mozRequestAnimationFrame ||
             webkitRequestAnimationFrame || msRequestAnimationFrame;
@@ -73,7 +75,6 @@
             }
         }
         $(document).ready(function() {
-            $("#loading").css("display", "none");
             if (!isMobile()) {
                 $("#mobile-only-image").hide();
                 $("#logo").hide();
