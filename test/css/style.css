@@ -238,10 +238,7 @@ video::-webkit-media-controls {
 /*---start-header----*/
 
 .header {
-    position: absolute;
-    top: 0px;
-    left: 0px;
-    height: 100vh;
+    position: relative;
     float: left;
     width: 100%;
     align-content: center;
