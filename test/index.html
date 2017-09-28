@@ -56,7 +56,6 @@
             replacement.innerHTML = addStylesNode.textContent;
             document.body.appendChild(replacement)
             addStylesNode.parentElement.removeChild(addStylesNode);
-            $("#loading_image").hide();
         };
         var raf = requestAnimationFrame || mozRequestAnimationFrame ||
             webkitRequestAnimationFrame || msRequestAnimationFrame;
@@ -76,6 +75,8 @@
             }
         }
         $(document).ready(function() {
+            $("#loading_image").hide();
+
             if (!isMobile()) {
                 $("#mobile-only-image").hide();
                 $("#logo").hide();
