@@ -15,8 +15,10 @@
     <meta content="drink and tell app android ios drinking game iphone play fun questions friends drink love personality ethics questions play store ios iphone" name="Keywords">
     <link href="images/fav-icon.png" rel="shortcut icon" type="image/x-icon">
     <style>
-        .logo {
-            src: url(images/logo.svg);
+        .loading_image {
+            margin: 100px;
+            background: url(images/logo.svg);
+            height: 100vh;
         }
 
     </style>
@@ -54,6 +56,7 @@
             replacement.innerHTML = addStylesNode.textContent;
             document.body.appendChild(replacement)
             addStylesNode.parentElement.removeChild(addStylesNode);
+            $("#loading_image").hide();
         };
         var raf = requestAnimationFrame || mozRequestAnimationFrame ||
             webkitRequestAnimationFrame || msRequestAnimationFrame;
@@ -199,10 +202,10 @@ src="https://www.facebook.com/tr?id=972606119546558&ev=PageView&noscript=1"
 </script>
 
 <body>
+
+    <div class="loading_image"></div>
     <!--- start-wrap==-->
     <div>
-        <img id="logo" class="logo" />
-
         <!---start-header==-->
         <div class="header">
             <div class="video">
@@ -212,6 +215,7 @@ src="https://www.facebook.com/tr?id=972606119546558&ev=PageView&noscript=1"
                </video>
                 <div id="mobile-only-image"></div>
                 <div id="buttons-top" class="button-container">
+                    <img id="logo" class="logo" />
                     <div id="buttons_store" class="buttons-store">
                         <button id="button-ios" class="button-ios" onclick="location.href='https://itunes.apple.com/us/app/drink-and-tell/id977435351?ls=1&mt=8';"></button>
                         <button id="button-android" class="button-android" onclick="location.href='https://play.google.com/store/apps/details?id=com.blackmarket.drinkandtell';"></button>
