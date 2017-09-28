@@ -3,11 +3,6 @@
 
 <head>
     <title>Drink and Tell - Fun drinking game app</title>
-    <script src="js/jquery-3.2.1.min.js"></script>
-    <script src="https://code.jquery.com/jquery-1.10.1.min.js"></script>
-
-    <link href="css/style.css" rel="stylesheet" type="text/css">
-    <link href="css/animations.css" rel="stylesheet" type="text/css">
     <meta property="og:image" content="http://drinkandtellapp.com/images/logo.svg">
     <meta property="og:url" content="http://drinkandtellapp.com/">
     <meta property="og:title" content="Download Drink and Tell App for the Ultimate Drinking Game for and Android and IOS">
@@ -19,6 +14,20 @@
          " name="description">
     <meta content="drink and tell app android ios drinking game iphone play fun questions friends drink love personality ethics questions play store ios iphone" name="Keywords">
     <link href="images/fav-icon.png" rel="shortcut icon" type="image/x-icon">
+    <style>
+        .logo {
+            src: url(images/logo.svg);
+        }
+
+    </style>
+    <noscript id="deferred-styles">
+        <link href="css/style.css" rel="stylesheet" type="text/css">
+        <link href="css/animations.css" rel="stylesheet" type="text/css">
+    </noscript>
+
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script src="https://code.jquery.com/jquery-1.10.1.min.js"></script>
+    <script data-cfasync="false" type="text/javascript" src="js/form-submission-handler.js"></script>
 
     <!--==tracking==-->
     <script>
@@ -36,6 +45,22 @@
 
         ga('create', 'UA-65351065-1', 'auto');
         ga('send', 'pageview');
+
+    </script>
+    <script>
+        var loadDeferredStyles = function() {
+            var addStylesNode = document.getElementById("deferred-styles");
+            var replacement = document.createElement("div");
+            replacement.innerHTML = addStylesNode.textContent;
+            document.body.appendChild(replacement)
+            addStylesNode.parentElement.removeChild(addStylesNode);
+        };
+        var raf = requestAnimationFrame || mozRequestAnimationFrame ||
+            webkitRequestAnimationFrame || msRequestAnimationFrame;
+        if (raf) raf(function() {
+            window.setTimeout(loadDeferredStyles, 0);
+        });
+        else window.addEventListener('load', loadDeferredStyles);
 
     </script>
     <script>
@@ -176,6 +201,8 @@ src="https://www.facebook.com/tr?id=972606119546558&ev=PageView&noscript=1"
 <body>
     <!--- start-wrap==-->
     <div>
+        <img id="logo" class="logo" />
+
         <!---start-header==-->
         <div class="header">
             <div class="video">
@@ -185,7 +212,6 @@ src="https://www.facebook.com/tr?id=972606119546558&ev=PageView&noscript=1"
                </video>
                 <div id="mobile-only-image"></div>
                 <div id="buttons-top" class="button-container">
-                    <img id="logo" src="images/logo.svg" />
                     <div id="buttons_store" class="buttons-store">
                         <button id="button-ios" class="button-ios" onclick="location.href='https://itunes.apple.com/us/app/drink-and-tell/id977435351?ls=1&mt=8';"></button>
                         <button id="button-android" class="button-android" onclick="location.href='https://play.google.com/store/apps/details?id=com.blackmarket.drinkandtell';"></button>
@@ -379,7 +405,6 @@ src="https://www.facebook.com/tr?id=972606119546558&ev=PageView&noscript=1"
     <!---End-content==-->
     <!--- //End-wrap==-->
 
-    <script data-cfasync="false" type="text/javascript" src="js/form-submission-handler.js"></script>
 </body>
 
 </html>
