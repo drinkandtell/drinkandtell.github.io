@@ -74,6 +74,7 @@
         }
 
         $(document).ready(function() {
+            $(window).scroll();
             $("#loading").slideUp("slow");
 
             if (!isMobile()) {
@@ -98,13 +99,11 @@
             }
         });
 
-
         $(document).on('hide.visibility', function() {
             if (screen.width >= 500) {
                 $('video', this).get(0).pause();
             }
         });
-
 
         // Trigger CSS animations on scroll.
         // Detailed explanation can be found at http://www.bram.us/2013/11/20/scroll-animations/
@@ -113,22 +112,14 @@
         // elements scroll below the fold again?
         // --> Check https://codepen.io/bramus/pen/vKpjNP
 
-        //        jQuery(function($) {
-        //
-        //            // Function which adds the 'animated' class to any '.animatable' in view
-        //
-        //        });
-
-
-
         $(window).scroll(function() {
-            // Calc current offset and get all animatables
-            var offset = $(window).scrollTop() + $(window).height(),
-                $animatables = $('.animatable');
+            var offset = $(window).scrollTop() + $(window).height();
+            var $animatables = $('.animatable');
+
 
             // Unbind scroll handler if we have no animatables
-            if ($animatables.size() == 0) {
-                $(window).off('scroll', doAnimations);
+            if ($animatables.length == 0) {
+                $(window).unbind('scroll');
             }
 
             // Check all animatables and animate them if necessary
@@ -139,9 +130,6 @@
                 }
             });
         });
-        // Hook doAnimations on scroll, and trigger a scroll
-
-        $(window).trigger('scroll');
 
     </script>
     <!-- Facebook Pixel Code -->
