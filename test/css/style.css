@@ -803,12 +803,12 @@ video::-webkit-media-controls {
     .mobile-header {
         background: #D8D8D8;
         width: 100%;
-        height: 80vh;
+        height: 70vh;
     }
     .button-ios-mobile {
         padding: 5px;
-        width: 180px;
-        height: 12vw;
+        width: 175px;
+        height: 13vw;
         margin-left: auto;
         margin-right: auto;
         border: none;
@@ -831,9 +831,9 @@ video::-webkit-media-controls {
         border: none;
         margin-left: auto;
         margin-right: auto;
-        width: 180px;
+        width: 175px;
         position: relative;
-        height: 12vw;
+        height: 13vw;
         background-size: contain;
         background-repeat: no-repeat;
         cursor: pointer;
