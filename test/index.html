@@ -81,8 +81,10 @@
                     $('video', this).get(0).pause();
                 }
             } else {
-                // $('.thevideo').css('display', 'none');              
+                $('.thevideo').css('display', 'none');
                 $('.video').css('display', 'none');
+                $('#video_bg').css('display', 'none');
+
                 $("#logo").show();
                 $("#mobile-only-image").show();
                 $("#buttons-top").toggleClass('button-container button-container-mobile');
@@ -195,7 +197,7 @@ src="https://www.facebook.com/tr?id=972606119546558&ev=PageView&noscript=1"
             <div class="video">
                 <video class="thevideo" loop preload="none" width="100%">
                   <source src="video.mov" type="video/mp4">
-                  <img srcsrcset="images/banner-small 1x.png, images/banner.png 2x" src="banner-small.png" title="">
+                  <img id="video_bg" srcsrcset="images/banner-small 1x.png, images/banner.png 2x" src="banner-small.png" title="">
                </video>
                 <div id="buttons-top" class="button-container">
                     <img id="logo" src="images/logo.svg" />
