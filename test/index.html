@@ -68,7 +68,7 @@
             $(window).scroll();
             $("#loading").slideUp("slow");
 
-            if (!true) {
+            if (false) {
                 $("#mobile-only-image").hide();
                 $("#logo").hide();
 
@@ -83,6 +83,8 @@
                 }
             } else {
                 $('.thevideo').css('display', 'none');
+                $('.video').css('display', 'none');
+
                 $('video', this).get(0).pause();
                 $("video").hide();
                 $("#logo").show();
