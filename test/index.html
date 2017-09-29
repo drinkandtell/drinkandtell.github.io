@@ -67,8 +67,8 @@
         document.getElementById('jquery').addEventListener('load', function() {
             $("#loading").slideUp("slow");
 
-            if (false) {
-                $("#mobile-only-image").hide();
+            if (!isMobile()) {
+                $(".mobile-header").hide();
                 $("#logo").hide();
 
                 var figure = $(".video").hover(hoverVideo, hideVideo);
@@ -81,7 +81,7 @@
                     $('video', this).get(0).pause();
                 }
             } else {
-                $('.thevideo').css('display', 'none');
+                // $('.thevideo').css('display', 'none');              
                 $('.video').css('display', 'none');
                 $("#logo").show();
                 $("#mobile-only-image").show();
@@ -187,7 +187,6 @@ src="https://www.facebook.com/tr?id=972606119546558&ev=PageView&noscript=1"
 </script>
 
 <body>
-
     <div id="loading" class="loading_image"></div>
     <!--- start-wrap==-->
     <div>
@@ -198,13 +197,21 @@ src="https://www.facebook.com/tr?id=972606119546558&ev=PageView&noscript=1"
                   <source src="video.mov" type="video/mp4">
                   <img srcsrcset="images/banner-small 1x.png, images/banner.png 2x" src="banner-small.png" title="">
                </video>
-                <div id="mobile-only-image"></div>
                 <div id="buttons-top" class="button-container">
                     <img id="logo" src="images/logo.svg" />
                     <div id="buttons_store" class="buttons-store">
                         <button id="button-ios" class="button-ios" onclick="location.href='https://itunes.apple.com/us/app/drink-and-tell/id977435351?ls=1&mt=8';"></button>
                         <button id="button-android" class="button-android" onclick="location.href='https://play.google.com/store/apps/details?id=com.blackmarket.drinkandtell';"></button>
                     </div>
+                </div>
+            </div>
+            <div class="mobile-header">
+                <div id="mobile-only-image"></div>
+
+                <div id="mobile-buttons-container">
+                    <img id="logo-mobile" src="images/logo.svg" />
+                    <button id="button-ios-mobile" class="button-ios-mobile" onclick="location.href='https://itunes.apple.com/us/app/drink-and-tell/id977435351?ls=1&mt=8';" />
+                    <button id="button-android-mobile" class="button-android-mobile" onclick="location.href='https://play.google.com/store/apps/details?id=com.blackmarket.drinkandtell';" />
                 </div>
             </div>
         </div>
