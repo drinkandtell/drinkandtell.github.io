@@ -64,15 +64,6 @@
 
     </script>
     <script>
-        function isMobile() {
-            try {
-                document.createEvent("TouchEvent");
-                return true;
-            } catch (e) {
-                return false;
-            }
-        }
-
         document.getElementById('jquery').addEventListener('load', function() {
             $(window).scroll();
             $("#loading").slideUp("slow");
@@ -98,6 +89,14 @@
                 $("#buttons-top").toggleClass('button-container button-container-mobile');
             }
 
+            function isMobile() {
+                try {
+                    document.createEvent("TouchEvent");
+                    return true;
+                } catch (e) {
+                    return false;
+                }
+            }
 
             // --> Check https://codepen.io/bramus/pen/vKpjNP
             $(window).scroll(function() {
