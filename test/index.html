@@ -25,8 +25,8 @@
         <link href="css/style.css" rel="stylesheet" type="text/css">
         <link href="css/animations.css" rel="stylesheet" type="text/css">
     </noscript>
-    <script async type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
-    <script data-cfasync="false" type="text/javascript" src="js/form-submission-handler.js"></script>
+    <script async id="jquery" type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+    <script async type="text/javascript" src="js/form-submission-handler.js"></script>
 
     <!--==tracking==-->
     <script>
@@ -73,7 +73,7 @@
             }
         }
 
-        $(document).ready(function() {
+        document.getElementById('jquery').addEventListener('load', function() {
             $(window).scroll();
             $("#loading").slideUp("slow");
 
@@ -97,36 +97,31 @@
                 $("#mobile-only-image").show();
                 $("#buttons-top").toggleClass('button-container button-container-mobile');
             }
-        });
-
-        $(document).on('hide.visibility', function() {
-            if (screen.width >= 500) {
-                $('video', this).get(0).pause();
-            }
-        });
-
-        // Trigger CSS animations on scroll.
-        // Detailed explanation can be found at http://www.bram.us/2013/11/20/scroll-animations/
-
-        // Looking for a version that also reverses the animation when
-        // elements scroll below the fold again?
-        // --> Check https://codepen.io/bramus/pen/vKpjNP
-
-        $(window).scroll(function() {
-            var offset = $(window).scrollTop() + $(window).height();
-            var $animatables = $('.animatable');
 
 
-            // Unbind scroll handler if we have no animatables
-            if ($animatables.length == 0) {
-                $(window).unbind('scroll');
-            }
+            // --> Check https://codepen.io/bramus/pen/vKpjNP
+            $(window).scroll(function() {
+                var offset = $(window).scrollTop() + $(window).height();
+                var $animatables = $('.animatable');
 
-            // Check all animatables and animate them if necessary
-            $animatables.each(function(i) {
-                var $animatable = $(this);
-                if (($animatable.offset().top + $animatable.height() - 20) < offset) {
-                    $animatable.removeClass('animatable').addClass('animated');
+
+                // Unbind scroll handler if we have no animatables
+                if ($animatables.length == 0) {
+                    $(window).unbind('scroll');
+                }
+
+                // Check all animatables and animate them if necessary
+                $animatables.each(function(i) {
+                    var $animatable = $(this);
+                    if (($animatable.offset().top + $animatable.height() - 20) < offset) {
+                        $animatable.removeClass('animatable').addClass('animated');
+                    }
+                });
+            });
+
+            $(document).on('hide.visibility', function() {
+                if (screen.width >= 500) {
+                    $('video', this).get(0).pause();
                 }
             });
         });
