@@ -65,7 +65,6 @@
     </script>
     <script>
         document.getElementById('jquery').addEventListener('load', function() {
-            $(window).scroll();
             $("#loading").slideUp("slow");
 
             if (false) {
@@ -123,6 +122,9 @@
                     $('video', this).get(0).pause();
                 }
             });
+
+            $(window).scroll();
+
         });
 
     </script>
