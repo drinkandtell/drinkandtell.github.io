@@ -819,10 +819,10 @@ video::-webkit-media-controls {
         position: absolute;
         top: 100%;
         left: 50%;
-        transform: translate(-50%, 80%);
-        -ms-transform: translate(-50%, 80%);
+        transform: translate(-50%, 130%);
+        -ms-transform: translate(-50%, 130%);
         /* IE 9 */
-        -webkit-transform: translate(-50%, 80%);
+        -webkit-transform: translate(-50%, 130%);
         /* Chrome, Safari, Opera */
     }
     .button-android-mobile {
@@ -840,10 +840,10 @@ video::-webkit-media-controls {
         position: absolute;
         top: 120%;
         left: 50%;
-        transform: translate(-50%, 130%);
-        -ms-transform: translate(-50%, 130%);
+        transform: translate(-50%, 170%);
+        -ms-transform: translate(-50%, 170%);
         /* IE 9 */
-        -webkit-transform: translate(-50%, 130%);
+        -webkit-transform: translate(-50%, 170%);
         /* Chrome, Safari, Opera */
     }
     .kickstart-large {
