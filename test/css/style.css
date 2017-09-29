@@ -771,8 +771,6 @@ video::-webkit-media-controls {
         float: left;
         width: 100vw;
         height: 31vh;
-        background: url(../images/banner.png);
-        background-size: contain;
     }
     #mobile-buttons-container {
         width: 100vw;
