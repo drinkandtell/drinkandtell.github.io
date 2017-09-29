@@ -778,10 +778,6 @@ video::-webkit-media-controls {
         height: 54vw;
         background: url(../images/banner.png);
         background-size: contain;
-        transform: translate(-2%, 0%);
-        -ms-transform: translate(-2%, 0%);
-        /* IE 9 */
-        -webkit-transform: translate(-2%, 0%);
     }
     #mobile-buttons-container {
         width: 100%;
