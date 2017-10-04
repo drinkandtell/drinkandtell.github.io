@@ -615,12 +615,9 @@ video::-webkit-media-controls {
     margin-top: 20px;
     color: black;
     border: 2px solid black;
-    width: 100%;
+    width: 50%;
     border-radius: 60px;
     padding-bottom: 5px;
-}
-
-.button_submit {
     position: relative;
     background: transparent;
     outline: none;
@@ -631,8 +628,6 @@ video::-webkit-media-controls {
     float: right;
     vertical-align: super;
     text-align: center;
-    border: none;
-    margin: auto;
 }
 
 
