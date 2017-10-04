@@ -527,6 +527,7 @@ video::-webkit-media-controls {
 }
 
 .mc-field-group {
+    width: 100%;
     margin-top: 1em;
     font-family: 'Open Sans', sans-serif;
     color: #4C4C4C;
@@ -535,14 +536,17 @@ video::-webkit-media-controls {
     font-size: 1.0em;
     font-weight: 300;
     box-sizing: border-box;
+    border: 2px solid black;
 }
 
 .mc-field-group input {
     margin: 0px;
     padding: 10px;
     height: 20px;
-    width: 60vw;
+    width: 100%;
     margin: auto;
+    border: none;
+    background: transparent;
 }
 
 .mc_embed_signup_scroll {
@@ -606,6 +610,16 @@ video::-webkit-media-controls {
     padding-bottom: 5px;
 }
 
+#mc-embedded-subscribe {
+    text-align: center;
+    margin-top: 20px;
+    color: black;
+    border: 2px solid black;
+    width: 100%;
+    border-radius: 60px;
+    padding-bottom: 5px;
+}
+
 .button_submit {
     position: relative;
     background: transparent;
@@ -614,6 +628,7 @@ video::-webkit-media-controls {
     text-transform: uppercase;
     font-size: 20px;
     cursor: pointer;
+    float: right;
     vertical-align: super;
     text-align: center;
     border: none;
@@ -1037,12 +1052,6 @@ video::-webkit-media-controls {
         background: #2B2123;
         display: flex;
         align-items: center;
-    }
-    .stay-with {
-        width: 100%;
-        float: left;
-        position: relative;
-        background: #60E5C6;
     }
     .footer-left {
         float: none;
