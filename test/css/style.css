@@ -188,7 +188,7 @@ h1 {
     color: #2B2123;
     font-family: 'DomusTitling-Bold', sans-serif;
     text-transform: uppercase;
-    font-size: 60px;
+    font-size: 50px;
     text-align: center;
     margin-bottom: 20px;
 }
@@ -211,7 +211,7 @@ h4 {
 }
 
 p {
-    color: #2B2123;
+    color: black;
     font-size: 19px;
     font-family: 'Avenir', sans-serif;
 }
@@ -508,19 +508,12 @@ video::-webkit-media-controls {
 
 .smaller-text {
     font-size: 0.9em;
-    color: #4C4C4C;
     font-family: 'Avenir', sans-serif;
 }
 
 .form-container {
     width: 50%;
     margin: 0 auto
-}
-
-.form {
-    width: 100%;
-    display: inline-block;
-    padding: 0px;
 }
 
 .text-box-dark {
@@ -1114,9 +1107,7 @@ video::-webkit-media-controls {
     p {
         font-size: 19px;
     }
-    h1 {
-        font-size: 30px;
-    }
+    h1,
     h2 {
         font-size: 20px;
     }
@@ -1180,7 +1171,7 @@ video::-webkit-media-controls {
         font-size: 19px;
     }
     h1 {
-        font-size: 30px;
+        font-size: 25px;
     }
     h2 {
         font-size: 25px;
