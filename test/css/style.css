@@ -410,6 +410,14 @@ video::-webkit-media-controls {
     display: table;
 }
 
+.standard-text-container {
+    text-align: center;
+    margin: 10px auto;
+    width: 80%;
+    display: table;
+    position: relative;
+}
+
 
 /*---//End-promo----*/
 
@@ -489,6 +497,12 @@ video::-webkit-media-controls {
 
 /*---form-----*/
 
+.smaller-text {
+    font-size: 0.9em;
+    color: #4C4C4C;
+    font-family: 'Avenir', sans-serif;
+}
+
 .form-container {
     width: 50%;
     margin: 0 auto
@@ -502,19 +516,28 @@ video::-webkit-media-controls {
 
 .text-box-dark {
     background: transparent;
+    width: 100%;
+    height: 100%;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
     border: 2px solid black;
 }
 
-.form input[type="text"] {
-    padding: 2em;
+.mc-field-group {
+    padding: 1em;
     font-family: 'Open Sans', sans-serif;
-    color: black;
+    color: #4C4C4C;
     width: 100%;
-    margin: .5em 0;
     outline: none;
-    font-size: .9em;
+    font-size: 1.0em;
     font-weight: 300;
     box-sizing: border-box;
+}
+
+.mc_embed_signup_scroll {
+    width: 100%;
 }
 
 #address {
@@ -574,7 +597,7 @@ video::-webkit-media-controls {
     padding-bottom: 5px;
 }
 
-#button_submit {
+.button_submit {
     position: relative;
     background: transparent;
     outline: none;
