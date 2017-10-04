@@ -530,7 +530,6 @@ video::-webkit-media-controls {
     margin-top: 1em;
     font-family: 'Open Sans', sans-serif;
     color: #4C4C4C;
-    width: 100%;
     float: left;
     outline: none;
     font-size: 1.0em;
@@ -538,8 +537,16 @@ video::-webkit-media-controls {
     box-sizing: border-box;
 }
 
+.mc-field-group input {
+    margin: 0px;
+    padding: 10px;
+    height: 20px;
+    width: 60vw;
+    margin: auto;
+}
+
 .mc_embed_signup_scroll {
-    width: 90%;
+    width: 100%;
 }
 
 #address {
