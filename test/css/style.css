@@ -549,8 +549,9 @@ video::-webkit-media-controls {
     background: transparent;
 }
 
-.mc_embed_signup_scroll {
-    width: 100%;
+#mc_embed_signup_scroll {
+    width: 60%;
+    margin: auto;
 }
 
 #address {
@@ -615,7 +616,7 @@ video::-webkit-media-controls {
     margin-top: 20px;
     color: black;
     border: 2px solid black;
-    width: 50%;
+    width: 30%;
     border-radius: 60px;
     padding-bottom: 5px;
     position: relative;
@@ -1134,6 +1135,28 @@ video::-webkit-media-controls {
         margin-left: 45px;
         margin-right: 20px;
         list-style-type: disc;
+    }
+    #mc-embedded-subscribe {
+        text-align: center;
+        margin-top: 20px;
+        color: black;
+        border: 2px solid black;
+        width: 50%;
+        border-radius: 60px;
+        padding-bottom: 5px;
+        position: relative;
+        background: transparent;
+        outline: none;
+        font-family: 'DomusTitling', sans-serif;
+        text-transform: uppercase;
+        font-size: 20px;
+        cursor: pointer;
+        float: right;
+        vertical-align: super;
+        text-align: center;
+    }
+    #mc_embed_signup_scroll {
+        width: 100%;
     }
 }
 
