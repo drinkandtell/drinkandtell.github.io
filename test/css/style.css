@@ -523,13 +523,15 @@ video::-webkit-media-controls {
     padding-left: 10px;
     padding-right: 10px;
     border: 2px solid black;
+    margin: 0px;
 }
 
 .mc-field-group {
-    padding: 1em;
+    margin-top: 1em;
     font-family: 'Open Sans', sans-serif;
     color: #4C4C4C;
     width: 100%;
+    float: left;
     outline: none;
     font-size: 1.0em;
     font-weight: 300;
@@ -537,7 +539,7 @@ video::-webkit-media-controls {
 }
 
 .mc_embed_signup_scroll {
-    width: 100%;
+    width: 90%;
 }
 
 #address {
@@ -793,7 +795,7 @@ video::-webkit-media-controls {
         position: relative;
         float: left;
         width: 100vw;
-        height: 31vh;
+        height: 90vh;
     }
     #mobile-buttons-container {
         width: 100vw;
@@ -813,8 +815,8 @@ video::-webkit-media-controls {
         /* Chrome, Safari, Opera */
         margin-left: auto;
         margin-right: auto;
-        width: 170px;
-        height: 170px;
+        width: 200px;
+        height: 200px;
     }
     .mobile-header {
         background: #D8D8D8;
@@ -895,7 +897,7 @@ video::-webkit-media-controls {
         float: left;
         position: relative;
         display: block;
-        background: url(../images/mobile_Party%20card%20game%20-%20green%20oval.png);
+        background: url(../images/green-oval-mobile.png);
         background-size: cover;
     }
     .circle-small p {
@@ -1009,7 +1011,8 @@ video::-webkit-media-controls {
         margin-top: 20px;
     }
     .form-container {
-        width: 80%;
+        width: 70%;
+        background: transparent;
         margin: 0 auto
     }
     .press-kit {
@@ -1029,6 +1032,7 @@ video::-webkit-media-controls {
         align-items: center;
     }
     .stay-with {
+        width: 100%;
         float: left;
         position: relative;
         background: #60E5C6;
