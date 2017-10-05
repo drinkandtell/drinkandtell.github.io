@@ -1,78 +1,216 @@
-function validEmail(email) { // see:
-    var re = /^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$/i;
-    return re.test(email);
+// Add the novalidate attribute when the JS loads
+var forms = document.querySelectorAll('.validate');
+for (var i = 0; i < forms.length; i++) {
+    forms[i].setAttribute('novalidate', true);
 }
-// get all data in form and return object
-function getFormData() {
-    var elements = document.getElementById("gform").elements; // all form elements
-    var fields = Object.keys(elements).map(function (k) {
-        if (elements[k].name !== undefined) {
-            return elements[k].name;
-            // special case for Edge's html collection
-        } else if (elements[k].length > 0) {
-            return elements[k].item(0).name;
+
+
+// Validate the field
+var hasError = function (field) {
+
+    // Don't validate submits, buttons, file and reset inputs, and disabled fields
+    if (field.disabled || field.type === 'file' || field.type === 'reset' || field.type === 'submit' || field.type === 'button') return;
+
+    // Get validity
+    var validity = field.validity;
+
+    // If valid, return null
+    if (validity.valid) return;
+
+    // If field is required and empty
+    if (validity.valueMissing) return 'Please fill out this field.';
+
+    // If not the right type
+    if (validity.typeMismatch) {
+
+        // Email
+        if (field.type === 'email') return 'Please enter an email address.';
+
+        // URL
+        if (field.type === 'url') return 'Please enter a URL.';
+
+    }
+
+    // If too short
+    if (validity.tooShort) return 'Please lengthen this text to ' + field.getAttribute('minLength') + ' characters or more. You are currently using ' + field.value.length + ' characters.';
+
+    // If too long
+    if (validity.tooLong) return 'Please shorten this text to no more than ' + field.getAttribute('maxLength') + ' characters. You are currently using ' + field.value.length + ' characters.';
+
+    // If pattern doesn't match
+    if (validity.patternMismatch) {
+
+        // If pattern info is included, return custom error
+        if (field.hasAttribute('title')) return field.getAttribute('title');
+
+        // Otherwise, generic error
+        return 'Please match the requested format.';
+
+    }
+
+    // If number input isn't a number
+    if (validity.badInput) return 'Please enter a number.';
+
+    // If a number value doesn't match the step interval
+    if (validity.stepMismatch) return 'Please select a valid value.';
+
+    // If a number field is over the max
+    if (validity.rangeOverflow) return 'Please select a value that is no more than ' + field.getAttribute('max') + '.';
+
+    // If a number field is below the min
+    if (validity.rangeUnderflow) return 'Please select a value that is no less than ' + field.getAttribute('min') + '.';
+
+    // If all else fails, return a generic catchall error
+    return 'The value you entered for this field is invalid.';
+
+};
+
+
+// Show an error message
+var showError = function (field, error) {
+
+    // Add error class to field
+    field.classList.add('error');
+
+    // If the field is a radio button and part of a group, error all and get the last item in the group
+    if (field.type === 'radio' && field.name) {
+        var group = field.form.querySelectorAll('[name="' + field.name + '"]');
+        if (group.length > 0) {
+            for (var i = 0; i < group.length; i++) {
+                group[i].classList.add('error');
+            }
+            field = group[group.length - 1];
         }
-    }).filter(function (item, pos, self) {
-        return self.indexOf(item) == pos && item;
-    });
-    var data = {};
-    fields.forEach(function (k) {
-        data[k] = elements[k].value;
-        var str = ""; // declare empty string outside of loop to allow
-        // it to be appended to for each item in the loop
-        if (elements[k].type === "checkbox") { // special case for Edge's html collection
-            str = str + elements[k].checked + ", "; // take the string and append 
-            // the current checked value to 
-            // the end of it, along with 
-            // a comma and a space
-            data[k] = str.slice(0, -2); // remove the last comma and space 
-            // from the  string to make the output 
-            // prettier in the spreadsheet
-        } else if (elements[k].length) {
-            for (var i = 0; i < elements[k].length; i++) {
-                if (elements[k].item(i).checked) {
-                    str = str + elements[k].item(i).value + ", "; // same as above
-                    data[k] = str.slice(0, -2);
-                }
+    }
+
+    // Get field id or name
+    var id = field.id || field.name;
+    if (!id) return;
+
+    // Check if error message field already exists
+    // If not, create one
+    var message = field.form.querySelector('.error-message#error-for-' + id);
+    if (!message) {
+        message = document.createElement('div');
+        message.className = 'error-message';
+        message.id = 'error-for-' + id;
+
+        // If the field is a radio button or checkbox, insert error after the label
+        var label;
+        if (field.type === 'radio' || field.type === 'checkbox') {
+            label = field.form.querySelector('label[for="' + id + '"]') || field.parentNode;
+            if (label) {
+                label.parentNode.insertBefore(message, label.nextSibling);
             }
         }
-    });
-    console.log(data);
-    return data;
-}
 
-function handleFormSubmit(event) { // handles form submit withtout any jquery
-    event.preventDefault(); // we are submitting via xhr below
-    var data = getFormData(); // get the values submitted in the form
-    if (!validEmail(data.email)) { // if email is not valid show error
-        document.getElementById('email-invalid').style.display = 'block';
-        return false;
-    } else {
-        var url = event.target.action; //
-        var xhr = new XMLHttpRequest();
-        xhr.open('POST', url);
-        // xhr.withCredentials = true;
-        xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
-        xhr.onreadystatechange = function () {
-            console.log(xhr.status, xhr.statusText)
-            console.log(xhr.responseText);
-            document.getElementById('gform').style.display = 'none'; // hide form
-            //alert("Thanks for your message")
-            document.getElementById('thankyou_message').style.display = 'block';
-            return;
-        };
-        // url encode form data for sending as post data
-        var encoded = Object.keys(data).map(function (k) {
-            return encodeURIComponent(k) + '=' + encodeURIComponent(data[k])
-        }).join('&')
-        xhr.send(encoded);
+        // Otherwise, insert it after the field
+        if (!label) {
+            field.parentNode.insertBefore(message, field.nextSibling);
+        }
+
     }
-}
 
-function loaded() {
-    console.log('contact form submission handler loaded successfully');
-    // bind to the submit event of our form
-    var form = document.getElementById('gform');
-    form.addEventListener("submit", handleFormSubmit, false);
+    // Add ARIA role to the field
+    field.setAttribute('aria-describedby', 'error-for-' + id);
+
+    // Update error message
+    message.innerHTML = error;
+
+    // Show error message
+    message.style.display = 'block';
+    message.style.visibility = 'visible';
+
 };
-document.addEventListener('DOMContentLoaded', loaded, false);
+
+
+// Remove the error message
+var removeError = function (field) {
+
+    // Remove error class to field
+    field.classList.remove('error');
+
+    // Remove ARIA role from the field
+    field.removeAttribute('aria-describedby');
+
+    // If the field is a radio button and part of a group, remove error from all and get the last item in the group
+    if (field.type === 'radio' && field.name) {
+        var group = field.form.querySelectorAll('[name="' + field.name + '"]');
+        if (group.length > 0) {
+            for (var i = 0; i < group.length; i++) {
+                group[i].classList.remove('error');
+            }
+            field = group[group.length - 1];
+        }
+    }
+
+    // Get field id or name
+    var id = field.id || field.name;
+    if (!id) return;
+
+
+    // Check if an error message is in the DOM
+    var message = field.form.querySelector('.error-message#error-for-' + id + '');
+    if (!message) return;
+
+    // If so, hide it
+    message.innerHTML = '';
+    message.style.display = 'none';
+    message.style.visibility = 'hidden';
+
+};
+
+
+// Listen to all blur events
+document.addEventListener('blur', function (event) {
+
+    // Only run if the field is in a form to be validated
+    if (!event.target.form.classList.contains('validate')) return;
+
+    // Validate the field
+    var error = hasError(event.target);
+
+    // If there's an error, show it
+    if (error) {
+        showError(event.target, error);
+        return;
+    }
+
+    // Otherwise, remove any existing error message
+    removeError(event.target);
+
+}, true);
+
+
+// Check all fields on submit
+document.addEventListener('submit', function (event) {
+
+    // Only run on forms flagged for validation
+    if (!event.target.classList.contains('validate')) return;
+
+    // Get all of the form elements
+    var fields = event.target.elements;
+
+    // Validate each field
+    // Store the first field with an error to a variable so we can bring it into focus later
+    var error, hasErrors;
+    for (var i = 0; i < fields.length; i++) {
+        error = hasError(fields[i]);
+        if (error) {
+            showError(fields[i], error);
+            if (!hasErrors) {
+                hasErrors = fields[i];
+            }
+        }
+    }
+
+    // If there are errrors, don't submit form and focus on first element with error
+    if (hasErrors) {
+        event.preventDefault();
+        hasErrors.focus();
+    }
+
+    // Otherwise, let the form submit normally
+    // You could also bolt in an Ajax form submit process here
+
+}, false);
