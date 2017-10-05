@@ -634,9 +634,6 @@ video::-webkit-media-controls {
 }
 
 
-/*-----*/
-
-
 /*---start-stay-with-us-----*/
 
 .stay-with {
@@ -659,13 +656,8 @@ video::-webkit-media-controls {
 
 .stay-with-head p {
     font-size: 1.1em;
-    color: #4C4C4C;
     line-height: 1.5em;
     margin: 0 auto
-}
-
-.stay-with-head p a:hover {
-    color: #4C4C4C
 }
 
 
